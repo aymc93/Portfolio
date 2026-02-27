@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aymeric — Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;700&family=Playfair+Display:ital,wght@1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="grain"></div>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<div id="intro">
+    <div class="intro-top"></div>
+    <div class="intro-bottom"></div>
+    <div class="intro-initials">
+        <span class="ii ii-a">A</span>
+        <span class="ii ii-c">C</span>
+    </div>
+    <div class="intro-line" id="intro-line"></div>
+    <p class="intro-sub">BUT Informatique — Portfolio 2025</p>
+</div>
+
+<nav id="nav">
+    <a href="#hero" class="nav-logo"><b>A</b>C</a>
+    <ul class="nav-links">
+        <li><a href="#about">Profil</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#parcours">Parcours</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="hero">
+    <canvas id="particle-canvas"></canvas>
+    <div class="hero-content">
+        <p class="hero-tag" id="hero-tag">Développeur · BUT Informatique · France</p>
+        <div class="hero-name" id="hero-name">
+            <div class="word" id="hw1"><span><span class="glitch-wrap" data-text="VOTRE">Aymeric</span></span></div>
+            <div class="word w2" id="hw2"><span>CLAUDIO.</span></div>
+            <div class="word w3" id="hw3"><span id="scramble-txt">PORTFOLIO</span></div>
+        </div>
+        <div class="hero-desc" id="hero-desc">
+            Je suis un développeur polyvalent, passionné par la création d'expériences interactives, de jeux et d'outils d'automatisation.
+        </div>
+    </div>
+    <div class="hero-scroll">
+        <div class="hs-mouse"><div class="hs-wheel"></div></div>
+        <span class="hs-label">Scroll</span>
+    </div>
+</section>
+
+<div class="marquee-strip">
+    <div class="marquee-inner" id="marquee-inner"></div>
+</div>
+
+<section id="about">
+    <div class="section">
+        <div class="rv"><p class="sec-pre">01 — Profil</p></div>
+        <div class="rv"><h2 class="sec-big">À PROPOS <em>de moi.</em></h2></div>
+        <div class="about-grid">
+            <div class="rv-l">
+                <div class="about-body">
+                    <p>Étudiant en <strong>BUT Informatique</strong></p>
+                    <p>Je suis un développeur polyvalent, passionné par la création d'expériences interactives, de jeux et d'outils d'automatisation. J'aime combiner logiciels, web et électronique pour concevoir des projets uniques.</p>
+                    <p>Objectif : intégrer une <strong>école d'ingénieur</strong>.</p>
+                    <a href="#contact" class="mag-btn"><span>Me contacter</span></a>
+                </div>
+                <div class="about-numbers rv">
+                    <div class="an"><span class="an-num count" data-target="3">0</span><span class="an-lbl">Ans de code</span></div>
+                    <div class="an"><span class="an-num count" data-target="10">0</span><span class="an-lbl">Projets livrés</span></div>
+                    <div class="an"><span class="an-num count" data-target="7">0</span><span class="an-lbl">Langages</span></div>
+                    <div class="an"><span class="an-num">∞</span><span class="an-lbl">Curiosité</span></div>
+                </div>
+            </div>
+            <div class="rv">
+                <div class="about-info">
+                    <div class="ai"><span class="ai-k">Formation</span><span class="ai-v">BUT Informatique</span></div>
+                    <div class="ai"><span class="ai-k">Localisation</span><span class="ai-v">France | Paris</span></div>
+                    <div class="ai"><span class="ai-k">Disponible</span><span class="ai-v">Stage & Alternance</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="section">
+        <div class="rv"><p class="sec-pre">02 — Compétences</p></div>
+        <div class="rv"><h2 class="sec-big">MON <em>arsenal.</em></h2></div>
+        <div class="skills-layout">
+            <div class="skills-rings rv-l" id="rings">
+                <div class="ring-item">
+                    <svg class="ring-svg" width="90" height="90" viewBox="0 0 100 100">
+                        <circle class="ring-bg" cx="50" cy="50" r="45"/>
+                        <circle class="ring-fill" cx="50" cy="50" r="45" data-pct="40"/>
+                    </svg>
+                    <div class="ring-pct">40</div>
+                    <span class="ring-name">Python</span>
+                </div>
+                <div class="ring-item">
+                    <svg class="ring-svg" width="90" height="90" viewBox="0 0 100 100">
+                        <circle class="ring-bg" cx="50" cy="50" r="45"/>
+                        <circle class="ring-fill" cx="50" cy="50" r="45" data-pct="90"/>
+                    </svg>
+                    <div class="ring-pct">90</div>
+                    <span class="ring-name">Java</span>
+                </div>
+                <div class="ring-item">
+                    <svg class="ring-svg" width="90" height="90" viewBox="0 0 100 100">
+                        <circle class="ring-bg" cx="50" cy="50" r="45"/>
+                        <circle class="ring-fill" cx="50" cy="50" r="45" data-pct="45"/>
+                    </svg>
+                    <div class="ring-pct">45</div>
+                    <span class="ring-name">C</span>
+                </div>
+                <div class="ring-item">
+                    <svg class="ring-svg" width="90" height="90" viewBox="0 0 100 100">
+                        <circle class="ring-bg" cx="50" cy="50" r="45"/>
+                        <circle class="ring-fill" cx="50" cy="50" r="45" data-pct="60"/>
+                    </svg>
+                    <div class="ring-pct">60</div>
+                    <span class="ring-name">MySQL</span>
+                </div>
+                <div class="ring-item">
+                    <svg class="ring-svg" width="90" height="90" viewBox="0 0 100 100">
+                        <circle class="ring-bg" cx="50" cy="50" r="45"/>
+                        <circle class="ring-fill" cx="50" cy="50" r="45" data-pct="80"/>
+                    </svg>
+                    <div class="ring-pct">80</div>
+                    <span class="ring-name">HTML | CSS</span>
+                </div>
+                <div class="ring-item">
+                    <svg class="ring-svg" width="90" height="90" viewBox="0 0 100 100">
+                        <circle class="ring-bg" cx="50" cy="50" r="45"/>
+                        <circle class="ring-fill" cx="50" cy="50" r="45" data-pct="30"/>
+                    </svg>
+                    <div class="ring-pct">30</div>
+                    <span class="ring-name">JavaScript</span>
+                </div>
+            </div>
+            <div class="skills-tags rv">
+                <div class="sk-group">
+                    <div class="sk-group-title">Outils</div>
+                    <div class="sk-wrap">
+                        <div class="sk"><span>Git / GitHub</span></div>
+                        <div class="sk"><span>Docker</span></div>
+                        <div class="sk"><span>Node.js</span></div>
+                        <div class="sk"><span>Bash</span></div>
+                        <div class="sk"><span>Illustrator</span></div>
+                        <div class="sk"><span>Photoshop</span></div>
+                        <div class="sk"><span>Blender</span></div>
+                        <div class="sk"><span>Arduino</span></div>
+                        <div class="sk"><span>Linux</span></div>
+                        <div class="sk"><span>PostgreSQL</span></div>
+                        <div class="sk"><span>Unity</span></div>
+                        <div class="sk"><span>Php</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="section">
+        <div class="rv"><p class="sec-pre">03 — Projets</p></div>
+        <div class="rv"><h2 class="sec-big">RÉALISATIONS <em>récentes.</em></h2></div>
+        <div class="proj-grid">
+            <div class="proj-card rv">
+                <div class="pc-num">01</div>
+                <span class="pc-status pc-done">Terminé</span>
+                <h3 class="pc-title">Site Web — vente de nourriture</h3>
+                <p class="pc-desc">Site web complet en html/css.</p>
+                <a href="https://github.com/aymc93/SAE-05-06" class="pc-link">Voir le projet</a>
+            </div>
+            <div class="proj-card rv">
+                <div class="pc-num">02</div>
+                <span class="pc-status pc-done">Terminé</span>
+                <h3 class="pc-title">Site Web — mise en avant JO 2024</h3>
+                <p class="pc-desc">Site web complet en html/css.</p>
+                <a href="#" class="pc-link">Projet école (impossible a voir)</a>
+            </div>
+            <div class="proj-card rv">
+                <div class="pc-num">03</div>
+                <span class="pc-status pc-done">Terminé</span>
+                <h3 class="pc-title">Jeu terminale — Gomoku</h3>
+                <p class="pc-desc">Jeu complet sur le terminale de commande.</p>
+                <a href="https://github.com/aymc93/Gomoku" class="pc-link">Voir le projet</a>
+            </div>
+            <div class="proj-card rv">
+                <div class="pc-num">04</div>
+                <span class="pc-status pc-done">Terminé</span>
+                <h3 class="pc-title">Jeu terminale — Echec</h3>
+                <p class="pc-desc">Jeu complet sur le terminale de commande.</p>
+                <a href="https://github.com/aymc93/Echec-Java" class="pc-link">Voir le projet</a>
+            </div>
+            <div class="proj-card rv">
+                <div class="pc-num">05</div>
+                <span class="pc-status pc-done">Terminé</span>
+                <h3 class="pc-title">Script jeu VR — DCS</h3>
+                <p class="pc-desc">Script pour adapter et des raccourci pour DCS.</p>
+                <a href="https://github.com/aymc93/Script-Macro-DCS-SU-33" class="pc-link">Voir le projet</a>
+            </div>
+            <div class="proj-card rv">
+                <div class="pc-num">06</div>
+                <span class="pc-status pc-done">Terminé</span>
+                <h3 class="pc-title">Jeu site web — Mr White</h3>
+                <p class="pc-desc">Jeu sur site web Mr White avec base de donné.</p>
+                <a href="https://github.com/aymc93/OverWorks" class="pc-link">Voir le projet</a>
+            </div>
+            <div class="proj-card rv">
+                <div class="pc-num">07</div>
+                <span class="pc-status pc-done">Terminé</span>
+                <h3 class="pc-title">Script caméra — Dj webcam</h3>
+                <p class="pc-desc">Controle une musique avec ses mains.</p>
+                <a href="https://github.com/aymc93/DJ-Webcam-script" class="pc-link">Voir le projet</a>
+            </div>
+            <div class="proj-card rv">
+                <div class="pc-num">09</div>
+                <span class="pc-status pc-done">Terminé</span>
+                <h3 class="pc-title">Script soundboard — soundboard</h3>
+                <p class="pc-desc">Permet de faire des soundboard avec un LaunchPad Mini.</p>
+                <a href="#" class="pc-link">Voir le projet</a>
+            </div>
+            <div class="proj-card rv">
+                <div class="pc-num">10</div>
+                <span class="pc-status pc-done">Terminé</span>
+                <h3 class="pc-title">Jeu java — BlackJack</h3>
+                <p class="pc-desc">Jeu BlackJack en java avec interface graphique.</p>
+                <a href="https://github.com/aymc93/Script-Soundboard-LaunchpadMini" class="pc-link">Voir le projet</a>
+            </div>
+            <div class="proj-card rv">
+                <div class="pc-num">11</div>
+                <span class="pc-status pc-done">Terminé</span>
+                <h3 class="pc-title">Jeu java — Terraria Like</h3>
+                <p class="pc-desc">Jeu Terraria Like en java avec interface graphique.</p>
+                <a href="https://github.com/IlyesBrhm/SAE-DEV-S2" class="pc-link">Voir le projet</a>
+            </div>
+            <div class="proj-card rv">
+                <div class="pc-num">...</div>
+                <h3 class="pc-title"> </h3>
+                <p class="pc-desc"> </p>
+                <a href="https://github.com/aymc93" class="pc-link">Voir plus de projet</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="section">
+        <div class="rv"><p class="sec-pre">05 — Contact</p></div>
+        <div class="rv"><h2 class="sec-big">ON <em>collabore ?</em></h2></div>
+        <div class="contact-grid">
+            <div class="rv-l">
+                <div class="contact-huge">ON<br><span class="r">CRÉE</span><br>ENSEMBLE ?</div>
+            </div>
+            <div class="rv">
+                <form class="cform" onsubmit="doSend(event)">
+                    <div class="cf"><label>Nom</label><input type="text" placeholder="Jean Dupont"></div>
+                    <div class="cf"><label>Email</label><input type="email" placeholder="jean@email.com"></div>
+                    <div class="cf"><label>Message</label><textarea placeholder="Votre message…"></textarea></div>
+                    <button type="submit" class="cf-send" id="send-btn">
+                        <span class="cf-send-t" id="send-txt">Envoyer</span>
+                        <span class="cf-send-l"></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <span class="ft">© 2025 — <span>AC</span> Portfolio</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
