@@ -154,3 +154,25 @@ function doSend(e){
     t.textContent='Envoyé ✓';t.style.color='var(--r)';
     setTimeout(()=>{t.textContent='Envoyer';t.style.color='';},3000);
 }
+
+
+/* ══════════════════════════════════════
+   CHARGEMENT LOGO ASCII EXTERNE
+══════════════════════════════════════ */
+async function loadAsciiLogo() {
+    const container = document.getElementById('ascii-container');
+    try {
+        const response = await fetch('logo.txt');
+        if (response.ok) {
+            const text = await response.text();
+            container.textContent = text;
+        } else {
+            container.textContent = "Erreur de chargement du logo";
+        }
+    } catch (error) {
+        // Si tu n'utilises pas de serveur local, le fetch va échouer ici
+        console.error("Le fetch a échoué. Note: Il faut un serveur local (Live Server).");
+        container.textContent = "Serveur local requis pour charger le logo.txt";
+    }
+}
+loadAsciiLogo();

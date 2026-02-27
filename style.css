@@ -545,3 +545,66 @@ footer{
     .hero-content{padding:0 28px;}
     .hero-desc{position:relative;right:auto;bottom:auto;margin-top:32px;max-width:100%;}
 }
+
+
+
+
+
+
+#hero .hero-content {
+    position: relative; /* Crée un point d'ancrage pour le logo */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-ascii {
+    position: absolute;
+    right: 5%;         /* Aligné à 5% du bord droit */
+    top: 50%;          /* Centré verticalement */
+    transform: translateY(-50%);
+
+    font-family: 'Courier New', monospace;
+    font-size: 8px;    /* Ajuste selon la largeur de ton logo.txt */
+    line-height: 10px; /* Espace entre les lignes */
+    color: var(--r);
+    text-shadow: 0 0 10px var(--r); /* Effet néon rouge */
+    white-space: pre;  /* Respecte strictement les espaces du fichier */
+    pointer-events: none;
+    opacity: 0.8;
+}
+#hero {
+    position: relative;
+    height: 100vh;      /* Force la hauteur à 100% de la fenêtre */
+    width: 100%;
+    overflow: hidden;   /* Empêche le contenu de "pousser" les murs */
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.hero-scroll {
+    position: absolute;
+    bottom: 40px;      /* Fixe la distance par rapport au bas */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    z-index: 10;       /* Pour passer au-dessus du canvas de particules */
+    pointer-events: none;
+}
+
+.hs-mouse {
+    width: 22px;
+    height: 36px;
+    border: 1.5px solid rgba(245, 237, 232, 0.2);
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 6px;
+}
