@@ -1,8 +1,8 @@
 :root{
-    --r:#d42b1e; --r2:#ff3a2a; --rg:rgba(212,43,30,.15);
+    --r:#d41e1e; --r2:#ff2a2a; --rg:rgba(212, 30, 30, 0.15);
     --bg:#060404; --b2:#0e0808; --b3:#150c0c;
-    --w:#f5ede8; --o:rgba(245,237,232,.5); --d:rgba(245,237,232,.18);
-    --bd: rgba(245, 237, 232, 0.16);
+    --w:#f5e8e8; --o:rgba(245,237,232,.5); --d:rgba(245, 232, 232, 0.281);
+    --bd: rgba(245, 232, 232, 0.16);
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -310,7 +310,7 @@ nav.scrolled{
     transition:border-color .4s,transform .4s;
     cursor:default;
 }
-.ring-item:hover{border-color:rgba(212,43,30,.5);transform:translateY(-4px);}
+.ring-item:hover{border-color:rgba(212, 30, 30, 0.5);transform:translateY(-4px);}
 .ring-svg{transform:rotate(-90deg);}
 .ring-bg{fill:none;stroke:rgba(245,237,232,.06);stroke-width:3;}
 .ring-fill{
