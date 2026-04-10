@@ -29,11 +29,55 @@
     <ul class="nav-links">
         <li><a href="#about">Profil</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projets</a></li>
         <li><a href="#parcours">Parcours</a></li>
+        <li><a href="#projects">Projets</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
+    <button id="theme-btn" title="Changer le thème">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+    </button>
 </nav>
+
+<!-- ══ THEME PANEL ══ -->
+<div id="theme-panel">
+    <div class="tp-header">
+        <span class="tp-title">THÈME</span>
+        <button id="mode-toggle" class="mode-toggle" title="Basculer clair / sombre">
+            <span class="mode-icon mode-dark">🌙</span>
+            <span class="mode-icon mode-light">☀️</span>
+            <span class="mode-label" id="mode-label">SOMBRE</span>
+        </button>
+    </div>
+    <div class="tp-themes">
+        <button class="tp-swatch active" data-theme="rouge">
+            <span class="sw-dot" style="background:#d42b1e"></span>
+            <span class="sw-name">Rouge</span>
+        </button>
+        <button class="tp-swatch" data-theme="ocean">
+            <span class="sw-dot" style="background:#0ea5e9"></span>
+            <span class="sw-name">Océan</span>
+        </button>
+        <button class="tp-swatch" data-theme="foret">
+            <span class="sw-dot" style="background:#22c55e"></span>
+            <span class="sw-name">Forêt</span>
+        </button>
+        <button class="tp-swatch" data-theme="violet">
+            <span class="sw-dot" style="background:#a855f7"></span>
+            <span class="sw-name">Violet</span>
+        </button>
+        <button class="tp-swatch" data-theme="or">
+            <span class="sw-dot" style="background:#f59e0b"></span>
+            <span class="sw-name">Or</span>
+        </button>
+    </div>
+    <div class="tp-preview">
+        <span class="tp-preview-label">Aperçu accent</span>
+        <div class="tp-preview-bar"></div>
+    </div>
+</div>
 
 <section id="hero">
     <canvas id="particle-canvas"></canvas>

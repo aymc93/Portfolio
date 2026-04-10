@@ -176,3 +176,85 @@ async function loadAsciiLogo() {
     }
 }
 loadAsciiLogo();
+/* ══════════════════════════════════════
+   THEME SWITCHER
+══════════════════════════════════════ */
+(function(){
+    const html = document.documentElement;
+    const themeBtn = document.getElementById('theme-btn');
+    const themePanel = document.getElementById('theme-panel');
+    const modeToggle = document.getElementById('mode-toggle');
+    const modeLabel = document.getElementById('mode-label');
+    const swatches = document.querySelectorAll('.tp-swatch');
+
+    let currentTheme = localStorage.getItem('theme') || 'rouge';
+    let currentMode  = localStorage.getItem('mode')  || 'dark';
+
+    function applyTheme(){
+        html.setAttribute('data-theme', currentTheme);
+        html.setAttribute('data-mode',  currentMode);
+        modeLabel.textContent = currentMode === 'dark' ? 'SOMBRE' : 'CLAIR';
+        swatches.forEach(s => {
+            s.classList.toggle('active', s.dataset.theme === currentTheme);
+        });
+        localStorage.setItem('theme', currentTheme);
+        localStorage.setItem('mode',  currentMode);
+    }
+
+    // Toggle panel
+    themeBtn.addEventListener('click', () => {
+        themePanel.classList.toggle('open');
+    });
+
+    // Close on outside click
+    document.addEventListener('click', e => {
+        if(!themePanel.contains(e.target) && !themeBtn.contains(e.target)){
+            themePanel.classList.remove('open');
+        }
+    });
+
+    // Theme select
+    swatches.forEach(s => {
+        s.addEventListener('click', () => {
+            currentTheme = s.dataset.theme;
+            applyTheme();
+        });
+    });
+
+    // Dark / Light toggle
+    modeToggle.addEventListener('click', () => {
+        currentMode = currentMode === 'dark' ? 'light' : 'dark';
+        applyTheme();
+    });
+
+    // Add theme-btn & mode-toggle to cursor hover list
+    [themeBtn, modeToggle, ...swatches].forEach(el => {
+        el.addEventListener('mouseenter', () => { dot.classList.add('hover'); ring.classList.add('hover'); });
+        el.addEventListener('mouseleave', () => { dot.classList.remove('hover'); ring.classList.remove('hover'); });
+    });
+
+    applyTheme();
+})();
+
+/* ══════════════════════════════════════
+   NAV SCROLL SPY — section active
+══════════════════════════════════════ */
+(function(){
+    const sections = document.querySelectorAll('section[id], #hero');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    function setActive(){
+        let current = '';
+        sections.forEach(sec => {
+            const top = sec.offsetTop - 120;
+            if(scrollY >= top) current = sec.getAttribute('id');
+        });
+        navLinks.forEach(a => {
+            const href = a.getAttribute('href').replace('#','');
+            a.classList.toggle('active', href === current);
+        });
+    }
+
+    window.addEventListener('scroll', setActive, { passive: true });
+    setActive();
+})();
